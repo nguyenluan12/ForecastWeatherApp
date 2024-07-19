@@ -4,6 +4,7 @@ import React, { useState,useEffect } from "react";
 function Overview(props) {
     
     const current = props.data.current;
+    
     // Xử lý hiển thị thời gian thực .
     const days =[
     "Sun",
@@ -64,7 +65,7 @@ function Overview(props) {
             height: '400px',
            
             }}>
-            
+            <h3>{ props.data.location.name }</h3>
             <div>{realTime}</div>
             <div style={
                 {

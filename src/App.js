@@ -10,7 +10,7 @@ function App() {
   const [city, setCity] = useState("hanoi");
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [isExistCity, setExistCity] = useState(true);
+  // const [isExistCity, setExistCity] = useState(true);
 
   
   async function handleFetchData(city) {
@@ -23,17 +23,15 @@ function App() {
         const res = response.data;
         setData(res); 
         setIsLoading(false); // Dữ liệu đã tải xong
-        setExistCity(true);
+        // setExistCity(true);
     } catch (error) {
         console.log(error);
-        setExistCity(false);
+        // setExistCity(false);
         setIsLoading(false);
         alert("Nhập sai thành phố !");
         setCity('hanoi');
     }
 }
-
-
 
   // Cập nhật dữ liệu khi thành phố thay đổi
   useEffect(() => {
@@ -91,7 +89,7 @@ function App() {
               onKeyDown={handleChangeInput} 
             />
           </div>
-          {isExistCity ? <h1>{city.toUpperCase()}</h1> : <></>}
+         
           <Overview data={data} /> 
         </div>
         <div className='analyst-and-forcast' style={{

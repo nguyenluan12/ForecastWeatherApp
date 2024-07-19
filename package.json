@@ -1,7 +1,7 @@
 {
   "name": "forecast-weather-app",
   "version": "0.1.0",
-  "homepage": "https://nguyenluan12.github.io/ForecastWeather",
+  "homepage": "https://nguyenluan12.github.io/ForecastWeather/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
